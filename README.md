@@ -4,7 +4,7 @@ Inquirer is an NPM package that provides an easy way to capture user input in yo
 
 You can develop CLI Games using Inquirer, Chalk, etc. All your class projects will be CLI based and should be deployed as an NPX command
 
-Run the following command to experience a CLI game:
+Run the following command to experience a CLI Projects:
 
 simple calcualtor:-
 npx sbt-simple-calculator
