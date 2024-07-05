@@ -65,22 +65,48 @@ async function option() {
 
 async function addStudent() {
     const { id, name, age, course } = await inquirer.prompt([
-        { name: 'id', type: 'input', message: chalk.rgb(155,136,0)('Enter Student ID:') },
-        { name: 'name', type: 'input', message: chalk.rgb(155,136,0)('Enter Student Name:') },
-        { name: 'age', type: 'input', message: chalk.rgb(155,136,0)('Enter Student Age:') },
-        { name: 'course', type: 'input', message:  chalk.rgb(155,136,0)('Enter Your Course:') },
+      {  name: 'id', 
+         type: 'input',
+         message: chalk.rgb(155,136,0)('Enter Student ID:') 
+        },
+      { name: 'name', 
+        type: 'input', 
+        message: chalk.rgb(155,136,0)('Enter Student Name:') 
+    },
+      { name: 'age', 
+        type: 'input', 
+        message: chalk.rgb(155,136,0)('Enter Student Age:') 
+    },
+      { name: 'course', 
+        type: 'input', 
+        message:  chalk.rgb(155,136,0)('Enter Your Course:') 
+    },
     ]);
+    
     students.push(new Student(Number(id), name, Number(age),course ));
     console.log(chalk.rgb(155,136,100).underline('\n\tStudent added successfully!'));
 }
 
 async function addTeacher() {
     const { id, name, age, department } = await inquirer.prompt([
-        { name: 'id', type: 'input', message: chalk.rgb(155,136,0)('Enter Teacher ID:') },
-        { name: 'name', type: 'input', message: chalk.rgb(155,136,0)('Enter Teacher Name:') },
-        { name: 'age', type: 'input', message: chalk.rgb(155,136,0)('Enter Teacher Age:') },
-        { name: 'department', type: 'input', message:  chalk.rgb(155,136,0)('Enter Your Department:') },
+    { name: 'id', 
+        type: 'input', 
+        message: chalk.rgb(155,136,0)('Enter Teacher ID:') 
+    },
+    { name: 'name', 
+      type: 'input', 
+      message: chalk.rgb(155,136,0)('Enter Teacher Name:') 
+    },
+    { name: 'age', 
+      type: 'input', 
+      message: chalk.rgb(155,136,0)('Enter Teacher Age:') 
+    },
+    { name: 'department',
+      type: 'input',
+      message:  chalk.rgb(155,136,0)('Enter Your Department:') 
+    },
     ]);
+   
     teachers.push(new Teacher(Number(id), name, Number(age), department));
     console.log(chalk.rgb(155,136,100).underline('\n\tTeacher added successfully!'));
 }
